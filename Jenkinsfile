@@ -1,4 +1,4 @@
-node{
+node('vm01'){
   stage('SCM Checkout') {
     git 'https://github.com/monbostest/java-code1.git'
     }
