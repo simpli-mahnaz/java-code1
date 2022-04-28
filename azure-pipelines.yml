@@ -15,5 +15,3 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- script: ls $(System.DefaultWorkingDirectory)
-  displayName:  "Checking War file"
