@@ -13,5 +13,10 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(agent.builddirectory)'
+    Contents: '**.war*'
+    TargetFolder: '$(build.artifactstagingdirectory)'
     sonarQubeRunAnalysis: false
 
