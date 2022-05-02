@@ -1,17 +1,24 @@
 
 
 pool:
+  name: newsA
   vmImage: ubuntu-latest
 
 steps:
+ - script: apt-get install maven -y
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'news'
+    namespace: 'default'
     effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 
 
