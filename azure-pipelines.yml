@@ -1,7 +1,7 @@
 
 
 pool:
-  name: newsA
+  name: news
   vmImage: ubuntu-latest
 
 steps:
