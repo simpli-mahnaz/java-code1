@@ -5,4 +5,4 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
- - script: apt-get install maven -y
+ - script: sudo  apt-get install maven -y
