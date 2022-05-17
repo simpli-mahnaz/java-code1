@@ -10,5 +10,5 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: 'pom.xml'
+    Contents: **/*.xml
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
