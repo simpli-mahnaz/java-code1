@@ -8,7 +8,7 @@ steps:
  - script: sudo  apt-get update  -y
  - script: sudo  apt-get install maven -y
  - task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: **/*.xml
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+   inputs:
+     SourceFolder: '$(System.DefaultWorkingDirectory)'
+     Contents: **/*.xml
+     TargetFolder: '$(Build.ArtifactStagingDirectory)'
