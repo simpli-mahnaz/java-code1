@@ -35,3 +35,11 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Free Trial(1)(75a2b295-b2c9-403a-b4a9-7fce370cc20e)'
+    appType: 'webAppLinux'
+    appName: 'newsac'
+    package: '$(System.DefaultWorkingDirectory)/**/*.war'
+    runtimeStack: 'TOMCAT|8.5-jre8'
