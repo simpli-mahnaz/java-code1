@@ -14,7 +14,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 - script:  sudo apt  update -y
-- script: sudo apt get-install maven -y
+- script: sudo apt install maven -y
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
